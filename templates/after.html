@@ -1,0 +1,97 @@
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+      <div class="table">
+      {% if vehInfo %}
+      <h1 >Details</h1>
+      <hr>
+
+  {% for key, value in vehInfo.items() %}
+  <h3 style="color:blue;display:inline;">{{ key }} : </h3>
+  <h3 style="display:inline;">{{ value }}</h3><br>
+  {% endfor %}
+  <br>
+  <hr>
+  </div>
+  {% endif %}
+  </body>
+  
+  
+  
+  
+  <style>
+    /*   color variables */
+  /*   border radius */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Mukta, sans-serif;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #4f546c;
+    font-size: 1rem;
+    background-color: #1cc58d;
+  }
+  
+  table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #e1e5ee;
+    background-color: rgb(72, 235, 235);
+    text-align: left;
+    overflow: hidden;
+  }
+  table thead {
+    box-shadow: 0 5px 10px #e1e5ee;
+  }
+  table th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  table td {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+  table a {
+    text-decoration: none;
+    color: #2962ff;
+  }
+  table .status {
+    border-radius: 0.2rem;
+    background-color: red;
+    padding: 0.2rem 1rem;
+    text-align: center;
+  }
+  table .status-pending {
+    background-color: #fff0c2;
+    color: #a68b00;
+  }
+  table .status-paid {
+    background-color: #c8e6c9;
+    color: #388e3c;
+  }
+  table .status-unpaid {
+    background-color: #ffcdd2;
+    color: #c62828;
+  }
+  table .amount {
+    text-align: right;
+  }
+  table tr:nth-child(even) {
+    background-color: #9ce95d;
+  }
+  </style>
